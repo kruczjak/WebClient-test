@@ -1,0 +1,17 @@
+@(message: String)
+
+@main("Gra w Kości") {
+
+<div class="col-md-12" style="text-align: center; margin-top: 100px">
+    <h1>
+       Gra w Kości
+    </h1>
+    <div>
+        Wybierz swoją grę: <br />
+        <a href="@routes.Games.index("nplus")" class="btn btn-primary">N+</a>
+        <a href="@routes.Games.index("nx")" class="btn btn-primary">N*</a>
+        <a href="@routes.Games.index("poker")" class="btn btn-primary">Poker</a>
+    </div>
+</div>
+
+}

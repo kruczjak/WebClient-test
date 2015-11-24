@@ -2,13 +2,11 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
-import views.html.application.index;
 
+import views.html.games.index;
 
-public class Application extends Controller {
-
+public class Game extends Controller{
     public Result index() {
         return ok(index.render("Your new application is ready."));
     }
-
 }
