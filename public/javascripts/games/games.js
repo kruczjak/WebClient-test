@@ -24,6 +24,12 @@ angular.module('webClient.games', [])
 .controller("GamesCtrl", ['$scope', 'Games', '$stateParams', function($scope, Games, $stateParams) {
     $scope.gamesList = Games.query();
     $scope.type = $stateParams.type;
+    $scope.playerList = [];
+
+    $scope.addPlayer = function() {
+      $scope.playerList.push({})
+    }
+
 }])
 
 .factory("Games", ['$resource', function($resource) {
