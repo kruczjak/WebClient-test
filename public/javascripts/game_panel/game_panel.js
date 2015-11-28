@@ -10,7 +10,7 @@ angular.module('webClient.game_panel', [])
             template: "<div ui-view></div>"
         })
         .state("game_panel.index", {
-            url: "/",
+            url: "/?mode",
             templateUrl: "assets/partials/game_panel/index.html",
             controller: "GamePanelCtrl"
         });
@@ -18,4 +18,8 @@ angular.module('webClient.game_panel', [])
 
 .controller("GamePanelCtrl", ['$scope', function($scope) {
 
+}])
+
+.factory("GamePanel", ['$resource', function($resource) {
+    return $resource('app/games', {}, {});
 }]);
