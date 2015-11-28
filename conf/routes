@@ -5,9 +5,8 @@
 # Home page
 GET     /                           controllers.Application.index()
 
-GET     /games                      controllers.Games.index(type: String ?="nplus")
-GET     /games/new                  controllers.Games.build()
-POST    /games                      controllers.Games.create()
+GET     /app/games                      controllers.Games.index(type: String ?="nplus")
+POST    /app/games                      controllers.Games.create
 
 GET     /game                       controllers.Game.index()
 

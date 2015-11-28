@@ -3,10 +3,8 @@ package controllers;
 import play.*;
 import play.mvc.*;
 
-import views.html.games.index;
-
 public class Game extends Controller{
     public Result index() {
-        return ok(index.render("Your new application is ready."));
+        return ok();
     }
 }
