@@ -16,8 +16,13 @@ angular.module('webClient.game_panel', [])
         });
 }])
 
-.controller("GamePanelCtrl", ['$scope', function($scope) {
+.controller("GamePanelCtrl", ['$scope', '$websocket', function($scope, $websocket) {
+    var dataStream = $websocket('ws://localhost:9000/app/socketio');
+    $scope.data = [];
 
+    dataStream.onMessage(function(message) {
+        $scope.data.push(message.data);
+    });
 }])
 
 .factory("GamePanel", ['$resource', function($resource) {

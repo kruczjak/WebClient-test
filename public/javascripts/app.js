@@ -3,6 +3,7 @@
 angular.module('webClient', [
     'ui.router',
     'ngResource',
+    'ngWebSocket',
     'webClient.games',
     'webClient.game_panel'
 ]).
